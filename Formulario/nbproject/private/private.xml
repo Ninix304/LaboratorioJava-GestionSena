@@ -3,18 +3,8 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/web/index.jsp</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/Controller/ControladorAprendiz.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/Interfaz/MeAprendiz.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/Model/Ficha.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/web/view/EditarA.jsp</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/Interfaz/MeFicha.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/web/view/FPrograma.jsp</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/ModelDao/AprendizDao.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/web/view/ListarA.jsp</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/web/view/Ficha.jsp</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/Controller/ControladorFicha.java</file>
-            <file>file:/F:/ClaseProgra/EjerciciosClase/Formulario/src/java/ModelDao/FichaDao.java</file>
+            <file>file:/C:/Users/Ninix/Documents/Sena/Sena%20Tecnologo/02-Programacion%20de%20software%20-%20Jhon%20Moreno/EjerciciosClase/LaboratorioJava-GestionSena/Formulario/web/view/FAprendiz.jsp</file>
+            <file>file:/C:/Users/Ninix/Documents/Sena/Sena%20Tecnologo/02-Programacion%20de%20software%20-%20Jhon%20Moreno/EjerciciosClase/LaboratorioJava-GestionSena/Formulario/web/index.jsp</file>
         </group>
     </open-files>
 </project-private>

@@ -11,7 +11,7 @@
   <meta charset="utf-8">
   <link href="view/css/estilo.css" rel="stylesheet" type="text/css"/>
   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-  <title>Registro de aprendiz</title>
+  <title>Registro de Aprendiz</title>
 </head>
 <body>
   <div id="contenedor">
