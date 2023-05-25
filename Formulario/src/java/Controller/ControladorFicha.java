@@ -23,7 +23,7 @@ import javax.swing.JOptionPane;
 @WebServlet(name = "ControladorFicha", urlPatterns = {"/ControladorFicha"})
 public class ControladorFicha extends HttpServlet {
     String agregar="view/Ficha.jsp";
-    String editar="view/EditarA.jsp";
+    String editar="view/EditarF.jsp";
     String listar="view/LFicha.jsp";
     
     Ficha fi = new Ficha();
@@ -101,31 +101,27 @@ public class ControladorFicha extends HttpServlet {
 
             
             
-        }/*else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("id", request.getParameter("id"));
+        }else if(action.equalsIgnoreCase("editar")){
+            request.setAttribute("codFicha", request.getParameter("codFicha"));
             
             acceso=editar;
             
-        }else if(action.equalsIgnoreCase("Editar")){
+        }else if(action.equalsIgnoreCase("EditarFi")){
             
-            id=Integer.parseInt(request.getParameter("txtId"));
-            int documento = Integer.parseInt(request.getParameter("txtDoc"));
-            String nombre = request.getParameter("txtNom");
-            String apellido = request.getParameter("txtApe");
-            String email = request.getParameter("txtEmail");
-            int telefono = Integer.parseInt(request.getParameter("txtTel"));
-            ape.setId(id);
-            ape.setDocuApre(documento);
-            ape.setApellido(apellido);
-            ape.setCorreo(email);
-            ape.setTeleApre(telefono);
-            adao.actualizarAp(ape);
+            int codficha = Integer.parseInt(request.getParameter("txtCodFicha"));
+            int cantapre = Integer.parseInt(request.getParameter("txtCantAp"));
+            int codprod = Integer.parseInt(request.getParameter("txtCodPro"));
+            int codaprendiz = Integer.parseInt(request.getParameter("txtCodAp"));
+            fi.setCodFicha(codficha);
+            fi.setCantAprendiz(codaprendiz);
+            fi.setCodPrograma(codprod);
+            fi.setCodAprendiz(codaprendiz);
             
             acceso = listar;
             
             
             
-        }*/
+        }
         RequestDispatcher view = request.getRequestDispatcher(acceso);
             view.forward(request, response);
     }

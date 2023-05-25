@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 #contenedor {
   position: relative;
   display: flex;
@@ -26,7 +32,7 @@ label {
   font-weight: bold;
 }
 
-input{
+input {
   display: block;
   width: 100%;
   padding: 0.5rem;
@@ -35,21 +41,34 @@ input{
   border: 1px solid #ccc;
 }
 
-button {
+.btn {
   display: inline-block;
-  width: 48%;
-  margin-right: 4%;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-button {
-  background: #04a4cc;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  background-color: #4CAF50;
   color: white;
   border: none;
-  margin-top: 1rem;
-  width: 100%;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+.btn-danger {
+  background-color: #ff4757;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }

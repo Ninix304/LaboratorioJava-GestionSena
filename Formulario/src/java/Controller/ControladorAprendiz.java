@@ -100,10 +100,10 @@ public class ControladorAprendiz extends HttpServlet {
             
         }else if(action.equalsIgnoreCase("Editar")){
             
-            id=Integer.parseInt(request.getParameter("txtId"));
+            int id = Integer.parseInt(request.getParameter("id"));
             int documento = Integer.parseInt(request.getParameter("txtDoc"));
-            String apellido = request.getParameter("txtApe");
             String nombre = request.getParameter("txtNom");
+            String apellido = request.getParameter("txtApe");
             String email = request.getParameter("txtEmail");
             int telefono = Integer.parseInt(request.getParameter("txtTel"));
             ape.setId(id);

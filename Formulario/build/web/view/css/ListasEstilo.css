@@ -1,0 +1,83 @@
+#tabla-aprendices {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-danger {
+  background-color: #ff4757;
+  color: #fff;
+}
+
+.btn-warning {
+  background-color: #feca57;
+  color: #fff;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.acciones .btn {
+  position: relative;
+}
+
+.acciones .btn .icon-trash,
+.acciones .btn .icon-pencil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+}
+
+body {
+  background-color: #f7f7f7;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenedor {
+  width: 80%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s;
+  margin: 0 auto;
+}
+
+.contenedor:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}

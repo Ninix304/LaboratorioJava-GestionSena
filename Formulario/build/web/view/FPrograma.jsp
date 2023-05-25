@@ -1,26 +1,27 @@
-
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <link href="Fstile.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Registrar Programa
-        
-        
-        </title>
-    </head>
-    <body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Registrar Programa</title>
+    <link href="css/ProgramaEstilo.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <div class="contenedor">
         <h1>Registro de Programas</h1>
         <div class="col-lg-6">
             <form action="../ControladorPrograma">
-                Codigo de Programa:<br><!-- comment -->
-                <input class="form-control" type="number" name="txtcodpro"><br>
-                Nombre del Programa:<br>
-                <input class="form-control" type="text" name="txtnombrepro">
+                <div class="form-group">
+                    <label for="codigo">Codigo de Programa:</label>
+                    <input class="form-control" type="number" name="txtcodpro" id="codigo">
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Nombre del Programa:</label>
+                    <input class="form-control" type="text" name="txtnombrepro" id="nombre">
+                </div>
                 <input class="btn btn-danger" type="submit" name="accion" value="AgregarPro">
-            </form> 
+            </form>
         </div>
-    </body>
+    </div>
+</body>
 </html>

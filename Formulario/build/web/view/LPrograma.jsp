@@ -14,7 +14,8 @@
     <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ListasEstilo.css" rel="stylesheet" type="text/css"/>
+        <link href="view/css/ListasEstilo.css" rel="stylesheet" type="text/css"/>
         <title>Lista de programas</title>
     </head>
     <body>
@@ -44,8 +45,8 @@
                         <td class="text-center"><%=pro.getNomprograma()%></td>
                         
                         <td class="text-center">
-                            <a class="btn btn-danger" href="../ControladorPrograma?accion=editar&id=<%=pro.getCodprograma()%>">EDITAR</a>
-                            <a class="btn btn-warning" href="../ControladorPrograma?accion=eliminar&id=<%=pro.getCodprograma()%>">ELIMINAR</a>
+                            <a class="btn btn-danger" href="ControladorPrograma?accion=editar&id=<%=pro.getCodprograma()%>">EDITAR</a>
+                            <a class="btn btn-warning" href="ControladorPrograma?accion=eliminar&id=<%=pro.getCodprograma()%>">ELIMINAR</a>
                         </td>
                     </tr>
                     <% } %>                    

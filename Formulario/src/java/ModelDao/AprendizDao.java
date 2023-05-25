@@ -123,10 +123,8 @@ public class AprendizDao implements MeAprendiz{
             ps=cn.prepareStatement(sql);
             ps.executeUpdate();
             
-            JOptionPane.showMessageDialog(null,"Aprendiz eliminado");
-            
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"El aprendiz no se pudo eliminar");
+            JOptionPane.showMessageDialog(null,"El aprendiz no se pudo eliminar"+e.getMessage());
             
         }
         return false;

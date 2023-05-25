@@ -15,8 +15,8 @@
     <head>
         
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="view/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="css/ListasEstilo.css" rel="stylesheet" type="text/css"/>
+        <link href="view/css/ListasEstilo.css" rel="stylesheet" type="text/css"/>
         <title>Lista de fichas</title>
     </head>
     <body>
@@ -48,7 +48,7 @@
                         <td class="text-center"><%=fi.getCodAprendiz()%></td>
                         
                         <td class="text-center">
-                            <a class="btn btn-danger" href="../ControladorFicha?accion=editar&codFicha=<%=fi.getCodFicha()%>">EDITAR</a>
+                            <a class="btn btn-danger" href="ControladorFicha?accion=editar&codFicha=<%=fi.getCodFicha()%>">EDITAR</a>
                             <a class="btn btn-warning" href="ControladorFicha?accion=eliminarfi&codficha=<%=fi.getCodFicha()%>">ELIMINAR</a>
 
                         </td>

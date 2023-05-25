@@ -14,7 +14,7 @@
         <link href="view/css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="view/css/estilo.css" rel="stylesheet" type="text/css"/>
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+        <link href="css/AprendizEstilo.css" rel="stylesheet" type="text/css"/>
         <title>Editar aprendiz</title>
     </head>
     <body>
@@ -23,7 +23,7 @@
       <h1>Editar aprendiz</h1>
       <%
       AprendizDao ape = new AprendizDao();
-      int id = Integer.parseInt((String)request.getAttribute("id"));
+      int id = Integer.parseInt(request.getParameter("id"));
       Aprendiz ap = new Aprendiz();
       ap=ape.list(id);
       
@@ -32,17 +32,13 @@
       
       <form action="ControladorAprendiz">
           
-        <label for="id">Id</label>
-        <input id="id" type="number" name="txtId" value="<%=ap.getId()%>">
+        <input type="hidden" name="id" value="<%=ap.getId()%>">
         <label for="documento">Documento</label>
         <input id="documento" type="number" name="txtDoc" value="<%=ap.getDocuApre()%>">
-
-        <label for="apellidos">Apellido</label>
-        <input id="apellidos" type="text" name="txtApe" value="<%=ap.getApellido()%>">
-
         <label for="nombre">Nombre</label>
         <input id="nombre" type="text" name="txtNom" value="<%=ap.getNombre()%>">
-
+        <label for="apellidos">Apellido</label>
+        <input id="apellidos" type="text" name="txtApe" value="<%=ap.getApellido()%>">
         <label for="correo">Correo electrónico</label>
         <input id="correo"  type="email" name="txtEmail" value="<%=ap.getCorreo()%>">
 

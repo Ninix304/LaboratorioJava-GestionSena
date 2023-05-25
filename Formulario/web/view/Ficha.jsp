@@ -9,56 +9,56 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link href="css/bootstrap.rtl.css" rel="stylesheet" type="text/css"/>
-    <title>JSP Page</title>
+    <link href="css/FichaEstilo.css" rel="stylesheet" type="text/css"/>
+    <title>Registrar ficha</title>
 </head>
 <body>
-    <h1>Formulario de Ficha</h1>
-    
-    <form action="../ControladorFicha">
-    
-        <div class="contenedor">
+    <div id="contenedor">
+        <div id="datos">
+            <h1>Formulario de Ficha</h1>
             
-            <label for="codficha">Código de Ficha</label><br>
-            <input class="form-control" type="number" id="codficha" name="txtCodFicha"><br>
+            <form action="../ControladorFicha">
             
-            <label for="cantap">Cantidad Aprendices</label><br>
-            <input class="form-control"type="number" id="cantap" name="txtCantAp">
-            
-            <div class="form-control">
-                <label>Nombre Programa:</label>
-                <select name="txtCodPro" id="codpro">
-                <option value="">Seleccione un programa</option><br>
-                <%ProgramaDao pro = new ProgramaDao();
-                List<Programa>lista = pro.listadopro();
-                     
-                %>
-                <% 
-                for(Programa li:lista){%>
-                <option value="<%=li.getCodprograma()%>"><%=li.getNomprograma()%></option>
-                <%}%>
-            </select> 
+                <label for="codficha">Código de Ficha</label><br>
+                <input type="number" id="codficha" name="txtCodFicha"><br>
                 
-            </div>
-            
-            
-            <div class="form-control">
-                <label>Nombre aprendiz:</label>
-                <select name="txtCodAp" id="codap">
-                <option value="">Seleccione un Aprendiz</option><br>
-                <%AprendizDao adao = new AprendizDao();
-                List<Aprendiz>list = adao.listadoA();
-                     
-                %>
-                <% 
-                for(Aprendiz li:list){%>
-                <option value="<%=li.getId()%>"><%=li.getNombre()%></option>
-                <%}%>
-            </select>    
-            </div>
-            <input class="btn btn-primary" type="submit" name="accion" value="AgregarFi">
-       
+                <label for="cantap">Cantidad Aprendices</label><br>
+                <input type="number" id="cantap" name="txtCantAp">
                 
-        
-    </form>
-</body
+                <div>
+                    <label>Nombre Programa:</label>
+                    <select name="txtCodPro" id="codpro">
+                    <option value="">Seleccione un programa</option><br>
+                    <%ProgramaDao pro = new ProgramaDao();
+                    List<Programa>lista = pro.listadopro();
+                         
+                    %>
+                    <% 
+                    for(Programa li:lista){%>
+                    <option value="<%=li.getCodprograma()%>"><%=li.getNomprograma()%></option>
+                    <%}%>
+                </select> 
+                    
+                </div>
+                
+                
+                <div>
+                    <label>Nombre aprendiz:</label>
+                    <select name="txtCodAp" id="codap">
+                    <option value="">Seleccione un Aprendiz</option><br>
+                    <%AprendizDao adao = new AprendizDao();
+                    List<Aprendiz>list = adao.listadoA();
+                         
+                    %>
+                    <% 
+                    for(Aprendiz li:list){%>
+                    <option value="<%=li.getId()%>"><%=li.getNombre()%></option>
+                    <%}%>
+                </select>    
+                </div>
+                <input type="submit" name="accion" value="AgregarFi">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
