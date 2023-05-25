@@ -51,8 +51,8 @@
                         <td class="text-center"><%=usu.getTeleApre()%></td>
                         
                         <td class="text-center">
-                            <a class="btn btn-danger" href="../ControladorAprendiz?accion=editar&id=<%=usu.getId()%>">EDITAR</a>
-                            <a class="btn btn-warning" href="../ControladorAprendiz?accion=eliminar&id=<%=usu.getId()%>">ELIMINAR</a>
+                            <a class="btn btn-danger" href="ControladorAprendiz?accion=editar&id=<%=usu.getId()%>">EDITAR</a>
+                            <a class="btn btn-warning" href="ControladorAprendiz?accion=eliminar&id=<%=usu.getId()%>">ELIMINAR</a>
                         </td>
                     </tr>
                     <% } %>                    

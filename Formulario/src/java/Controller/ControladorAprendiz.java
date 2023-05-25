@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ControladorAprendiz", urlPatterns = {"/ControladorAprendiz"})
 public class ControladorAprendiz extends HttpServlet {
 
-    String agregar="index.jsp";
+    String agregar="view/FAprendiz.jsp";
     String editar="view/EditarA.jsp";
     String listar="view/ListarA.jsp";
     
@@ -102,17 +102,17 @@ public class ControladorAprendiz extends HttpServlet {
             
             id=Integer.parseInt(request.getParameter("txtId"));
             int documento = Integer.parseInt(request.getParameter("txtDoc"));
-            String nombre = request.getParameter("txtNom");
             String apellido = request.getParameter("txtApe");
+            String nombre = request.getParameter("txtNom");
             String email = request.getParameter("txtEmail");
             int telefono = Integer.parseInt(request.getParameter("txtTel"));
             ape.setId(id);
             ape.setDocuApre(documento);
             ape.setApellido(apellido);
+            ape.setNombre(nombre);
             ape.setCorreo(email);
             ape.setTeleApre(telefono);
             adao.actualizarAp(ape);
-            
             acceso = listar;
             
             

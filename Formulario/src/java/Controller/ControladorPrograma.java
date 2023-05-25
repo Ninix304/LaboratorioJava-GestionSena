@@ -72,7 +72,7 @@ public class ControladorPrograma extends HttpServlet {
            p.setCodprograma(codp);
            p.setNomprograma(nompro);
            pdao.registrarpro(p);
-           
+           acceso=listarpro;           
             
        }else if(action.equalsIgnoreCase("eliminar")){
             id=Integer.parseInt(request.getParameter("id"));

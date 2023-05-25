@@ -11,13 +11,13 @@
   <meta charset="utf-8">
   <link href="view/css/estilo.css" rel="stylesheet" type="text/css"/>
   <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
-  <title>Registro de Aprendiz</title>
+  <title>Registro de aprendiz</title>
 </head>
 <body>
   <div id="contenedor">
     <div id="datos">
       <h1>Registro de aprendiz</h1>
-      <form action="ControladorAprendiz">
+      <form action="../ControladorAprendiz">
           
         <label for="documento">Documento</label>
         <input id="documento" type="number" name="txtDoc">

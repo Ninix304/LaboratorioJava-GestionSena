@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -27,6 +28,8 @@ public class ControladorFicha extends HttpServlet {
     
     Ficha fi = new Ficha();
     FichaDao fidao= new FichaDao();
+    
+    int codFicha;
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -89,15 +92,16 @@ public class ControladorFicha extends HttpServlet {
             fidao.registartFicha(fi);
             acceso=listar;
             
-        }/*else if(action.equalsIgnoreCase("eliminar")){
-            id=Integer.parseInt(request.getParameter("id"));
-            ape.setId(id);
-            adao.eliminarAp(id);
+        }else if(action.equalsIgnoreCase("eliminarfi")){
+            codFicha=Integer.parseInt(request.getParameter("codficha"));
+            fi.setCodFicha(codFicha);
+            fidao.eliminarFicha(codFicha);
             acceso=listar;
-        
+            
+
             
             
-        }else if(action.equalsIgnoreCase("editar")){
+        }/*else if(action.equalsIgnoreCase("editar")){
             request.setAttribute("id", request.getParameter("id"));
             
             acceso=editar;

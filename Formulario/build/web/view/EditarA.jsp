@@ -30,7 +30,7 @@
       %>
       
       
-      <form action="../ControladorAprendiz">
+      <form action="ControladorAprendiz">
           
         <label for="id">Id</label>
         <input id="id" type="number" name="txtId" value="<%=ap.getId()%>">

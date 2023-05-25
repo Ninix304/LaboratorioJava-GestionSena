@@ -107,7 +107,10 @@ public class AprendizDao implements MeAprendiz{
             cn=co.getConnection();
             ps=cn.prepareStatement(sql);
             ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"Informacion de aprendiz actualizada");
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"Informacion de aprendiz no fue actualizada");
+
         }
         return false;
     }
