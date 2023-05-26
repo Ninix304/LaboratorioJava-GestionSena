@@ -54,21 +54,10 @@ input {
   color: white;
   border: none;
   cursor: pointer;
-  animation: pulse 1s infinite;
 }
 
 .btn-danger {
   background-color: #ff4757;
 }
 
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+

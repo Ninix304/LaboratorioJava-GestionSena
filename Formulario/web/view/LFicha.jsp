@@ -29,6 +29,7 @@
                         <th class="text-center">Cantidad de Aprendices</th>
                         <th class="text-center">Codigo de programa</th>
                         <th class="text-center">Codigo de Aprendiz</th>
+                        <th class="text-center">ACCIONES</th>
                     </tr>         
                 </thead> 
                 
@@ -46,12 +47,16 @@
                         <td class="text-center"><%=fi.getCantAprendiz()%></td>
                         <td class="text-center"><%=fi.getCodPrograma()%></td>
                         <td class="text-center"><%=fi.getCodAprendiz()%></td>
-                        
                         <td class="text-center">
-                            <a class="btn btn-danger" href="ControladorFicha?accion=editar&codFicha=<%=fi.getCodFicha()%>">EDITAR</a>
-                            <a class="btn btn-warning" href="ControladorFicha?accion=eliminarfi&codficha=<%=fi.getCodFicha()%>">ELIMINAR</a>
-
-                        </td>
+                        <div class="acciones">
+                            <a class="btn btn-warning" href="ControladorFicha?accion=editar&codFicha=<%=fi.getCodFicha()%>">
+                                EDITAR
+                            </a>
+                            <a class="btn btn-danger" href="ControladorFicha?accion=eliminarfi&codficha=<%=fi.getCodFicha()%>">
+                                ELIMINAR
+                            </a>
+                        </div>
+                    </td>
                     </tr>
                     <% } %>                    
                 </tbody>

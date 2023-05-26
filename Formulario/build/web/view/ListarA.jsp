@@ -52,11 +52,9 @@
                         <div class="acciones">
                             <a class="btn btn-danger" href="ControladorAprendiz?accion=eliminar&id=<%= usu.getId() %>">
                                 ELIMINAR
-                                <span class="icon-trash"></span>
                             </a>
                             <a class="btn btn-warning" href="ControladorAprendiz?accion=editar&id=<%= usu.getId() %>">
                                 EDITAR
-                                <span class="icon-pencil"></span>
                             </a>
                         </div>
                     </td>
@@ -64,6 +62,7 @@
                 <% } %>
             </tbody>
         </table>
+            <button onclick="location.href='index.jsp'">Volver al inicio</button>
     </div>
 </body>
 </html>

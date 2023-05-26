@@ -26,6 +26,7 @@
                     <tr>
                         <th class="text-center">CODIGO</th>
                         <th class="text-center">NOMBRE</th>
+                        <th class="text-center">ACCIONES</th>
                     </tr>         
                 </thead> 
                 
@@ -43,10 +44,15 @@
                     <tr>
                         <td class="text-center"><%=pro.getCodprograma()%></td>
                         <td class="text-center"><%=pro.getNomprograma()%></td>
-                        
                         <td class="text-center">
-                            <a class="btn btn-danger" href="ControladorPrograma?accion=editar&id=<%=pro.getCodprograma()%>">EDITAR</a>
-                            <a class="btn btn-warning" href="ControladorPrograma?accion=eliminar&id=<%=pro.getCodprograma()%>">ELIMINAR</a>
+                        <div class="acciones">
+                            <a class="btn btn-warning" href="ControladorPrograma?accion=editar&id=<%=pro.getCodprograma()%>">
+                                EDITAR
+                            </a>
+                            <a class="btn btn-danger" href="ControladorPrograma?accion=eliminar&id=<%=pro.getCodprograma()%>">
+                                ELIMINAR
+                            </a>
+                        </div>
                         </td>
                     </tr>
                     <% } %>                    

@@ -29,8 +29,8 @@ public class AprendizDao implements MeAprendiz{
     Aprendiz usu = new Aprendiz();
     
     @Override
-    public Aprendiz list(int ide) {
-       String sql = "select * from aprendiz where id="+ide;
+    public Aprendiz list(int id) {
+       String sql = "select * from aprendiz where id="+id;
         try {
             cn=co.getConnection();
             ps=cn.prepareStatement(sql);
@@ -109,7 +109,7 @@ public class AprendizDao implements MeAprendiz{
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null,"Informacion de aprendiz actualizada");
         } catch (Exception e) {
-            JOptionPane.showMessageDialog(null,"Informacion de aprendiz no fue actualizada");
+            JOptionPane.showMessageDialog(null,"Informacion de aprendiz no fue actualizada" + e.getMessage());
 
         }
         return false;

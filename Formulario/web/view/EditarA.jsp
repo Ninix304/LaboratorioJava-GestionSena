@@ -23,16 +23,16 @@
       <h1>Editar aprendiz</h1>
       <%
       AprendizDao ape = new AprendizDao();
-      int id = Integer.parseInt(request.getParameter("id"));
-      Aprendiz ap = new Aprendiz();
-      ap=ape.list(id);
+      int id = Integer.parseInt((String)request.getAttribute("id"));
+      Aprendiz ap = (Aprendiz)ape.list(id);
+      
       
       %>
       
       
       <form action="ControladorAprendiz">
           
-        <input type="hidden" name="id" value="<%=ap.getId()%>">
+        <input type="hidden" name="txtId" value="<%= id%>">
         <label for="documento">Documento</label>
         <input id="documento" type="number" name="txtDoc" value="<%=ap.getDocuApre()%>">
         <label for="nombre">Nombre</label>
@@ -45,7 +45,7 @@
         <label for="nContact">Número de contacto</label>
         <input id="nContact" type="number" name="txtTel" value="<%=ap.getTeleApre()%>">
 
-        <input class="btn btn-primary" type="submit" name="accion" value="Editar">
+        <input class="btn btn-primary" type="submit" name="accion" value="EditarA">
       </form>
     </div>
   </div>

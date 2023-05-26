@@ -14,6 +14,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
+import static sun.jvm.hotspot.HelloWorld.e;
 
 
 /**
@@ -98,9 +100,9 @@ public class ControladorAprendiz extends HttpServlet {
             
             acceso=editar;
             
-        }else if(action.equalsIgnoreCase("Editar")){
+        }else if(action.equalsIgnoreCase("EditarA")){
             
-            int id = Integer.parseInt(request.getParameter("id"));
+            id = Integer.parseInt(request.getParameter("txtId"));
             int documento = Integer.parseInt(request.getParameter("txtDoc"));
             String nombre = request.getParameter("txtNom");
             String apellido = request.getParameter("txtApe");
@@ -114,7 +116,6 @@ public class ControladorAprendiz extends HttpServlet {
             ape.setTeleApre(telefono);
             adao.actualizarAp(ape);
             acceso = listar;
-            
             
             
         }

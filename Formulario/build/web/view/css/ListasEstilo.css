@@ -50,15 +50,6 @@ th {
   position: relative;
 }
 
-.acciones .btn .icon-trash,
-.acciones .btn .icon-pencil {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 16px;
-}
-
 body {
   background-color: #f7f7f7;
   height: 100vh;
@@ -80,4 +71,23 @@ body {
 
 .contenedor:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+button {
+  display: inline-block;
+  width: 48%;
+  margin-right: 4%;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background: #04a4cc;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+  width: 100%;
 }
