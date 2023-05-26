@@ -14,6 +14,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -28,7 +29,7 @@ public class ControladorPrograma extends HttpServlet {
    
    Programa p = new Programa();
    ProgramaDao pdao = new ProgramaDao();
-   int id;
+   int codprograma;
    
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
@@ -67,26 +68,34 @@ public class ControladorPrograma extends HttpServlet {
            acceso=agregarpro;
        }
         if(action.equalsIgnoreCase("Agregarpro")){
-           int codp=Integer.parseInt(request.getParameter("txtcodpro"));
+           int id=Integer.parseInt(request.getParameter("txtcodpro"));
            String nompro=request.getParameter("txtnombrepro");
-           p.setCodprograma(codp);
+           p.setCodprograma(id);
            p.setNomprograma(nompro);
            pdao.registrarpro(p);
            acceso=listarpro;           
             
-       }else if(action.equalsIgnoreCase("eliminar")){
-            id=Integer.parseInt(request.getParameter("id"));
-            p.setCodprograma(id);
-            pdao.eliminarpro(id);
+       }else if(action.equalsIgnoreCase("eliminarpro")){
+            codprograma=Integer.parseInt(request.getParameter("codprograma"));
+            p.setCodprograma(codprograma);
+            pdao.eliminarpro(codprograma);
             acceso=listarpro;
             
         
-        }else if(action.equalsIgnoreCase("editar")){
-            request.setAttribute("codprograma",request.getParameter("id"));
+        }else if(action.equalsIgnoreCase("editarpro")){
+            request.setAttribute("codprograma", request.getParameter("codprograma"));
             
             acceso=editarpro;
             
             
+        }else if(action.equalsIgnoreCase("Editar")){
+            
+            codprograma=Integer.parseInt(request.getParameter("txtcodpro"));
+            String nompro=request.getParameter("txtnombrepro");
+            p.setCodprograma(codprograma);
+            p.setNomprograma(nompro);
+            pdao.actualizarpro(p);
+            acceso = listarpro;            
         }
         RequestDispatcher view = request.getRequestDispatcher(acceso);
             view.forward(request, response);

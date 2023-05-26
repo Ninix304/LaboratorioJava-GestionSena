@@ -12,9 +12,9 @@ import java.util.List;
  * @author APRENDIZ
  */
 public interface MePrograma {
-    public Programa list(int id);
+    public Programa list(int codprograma);
     public List listadopro();
     public boolean registrarpro(Programa pro);
     public boolean actualizarpro(Programa pro);
-    public boolean eliminarpro(int id);
+    public boolean eliminarpro(int codprograma);
 }

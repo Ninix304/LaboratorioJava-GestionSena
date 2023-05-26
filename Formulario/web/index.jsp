@@ -14,6 +14,7 @@
     </head>
     <body>
     <header>
+        <img src="view/img/sena.png" width="100" height="100" class="senalogo" />
         <h1>Bienvenidos al sistema</h1>
     </header>
         

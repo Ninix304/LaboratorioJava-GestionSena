@@ -17,8 +17,8 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="view/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="view/css/estilo.css" rel="stylesheet" type="text/css"/>
+        <link href="view/css/AprendizEstilo.css" rel="stylesheet" type="text/css"/> 
+        <link href="view/css/FichaEstilo.css" rel="stylesheet" type="text/css"/>
         <title>Editar Ficha</title>
     </head>
     <body>
@@ -52,7 +52,7 @@
                 %>
                 <% 
                 for(Programa li:lista){%>
-                <option value="<%=li.getCodprograma()%>"><%=li.getNomprograma()%></option>
+                <option value="<%=li.getCodprograma()%>"><%=li.getCodprograma()%> - <%=li.getNomprograma()%></option>
                 <%}%>
             </select> 
                 
@@ -69,7 +69,7 @@
                 %>
                 <% 
                 for(Aprendiz li:list){%>
-                <option value="<%=li.getId()%>"><%=li.getNombre()%></option>
+                <option value="<%=li.getId()%>"><%=li.getId()%> - <%=li.getNombre()%></option>
                 <%}%>
             </select>    
             </div>

@@ -62,6 +62,7 @@
                 </tbody>
                 
             </table>
+                <button onclick="location.href='index.jsp'">Volver al inicio</button>
         </div>
         
     </body>

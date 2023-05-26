@@ -35,7 +35,7 @@
                     %>
                     <% 
                     for(Programa li:lista){%>
-                    <option value="<%=li.getCodprograma()%>"><%=li.getNomprograma()%></option>
+                    <option value="<%=li.getCodprograma()%>"><%=li.getCodprograma()%> - <%=li.getNomprograma()%></option>
                     <%}%>
                 </select> 
                     
@@ -52,7 +52,7 @@
                     %>
                     <% 
                     for(Aprendiz li:list){%>
-                    <option value="<%=li.getId()%>"><%=li.getNombre()%></option>
+                    <option value="<%=li.getId()%>"><%=li.getId()%> - <%=li.getNombre()%></option>
                     <%}%>
                 </select>    
                 </div>

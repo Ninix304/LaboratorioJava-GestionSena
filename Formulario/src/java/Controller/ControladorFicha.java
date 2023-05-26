@@ -113,10 +113,10 @@ public class ControladorFicha extends HttpServlet {
             int codprod = Integer.parseInt(request.getParameter("txtCodPro"));
             int codaprendiz = Integer.parseInt(request.getParameter("txtCodAp"));
             fi.setCodFicha(codficha);
-            fi.setCantAprendiz(codaprendiz);
+            fi.setCantAprendiz(cantapre);
             fi.setCodPrograma(codprod);
             fi.setCodAprendiz(codaprendiz);
-            
+            fidao.actualizarFicha(fi);
             acceso = listar;
             
             

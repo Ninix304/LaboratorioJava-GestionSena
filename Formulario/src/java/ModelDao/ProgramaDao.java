@@ -28,8 +28,8 @@ public class ProgramaDao implements MePrograma{
     Programa pro = new Programa();
         
     @Override
-    public Programa list(int ide) {
-        String sql = "select * from programa where codprograma="+ide;
+    public Programa list(int codprograma) {
+        String sql = "select * from programa where codprograma="+codprograma;
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
@@ -74,7 +74,7 @@ public class ProgramaDao implements MePrograma{
             ps.executeUpdate();
             JOptionPane.showMessageDialog(null,"programa registrado");
         }catch(SQLException ex){
-            JOptionPane.showMessageDialog(null,"programa no registrado");
+            JOptionPane.showMessageDialog(null,"programa no registrado"+ ex.getMessage());
         }
         
         return false;
@@ -84,19 +84,21 @@ public class ProgramaDao implements MePrograma{
 
     @Override
     public boolean actualizarpro(Programa pro) {
-        String sql="update programa set nombrepro='"+pro.getNomprograma()+"' where codprograma="+pro.getCodprograma();
+        String sql = "UPDATE programa SET codprograma='"+pro.getCodprograma()+"',nombrepro='"+pro.getNomprograma()+"'WHERE codprograma="+pro.getCodprograma();
         try {
             con=cn.getConnection();
             ps=con.prepareStatement(sql);
             ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"programa actualizado");
         } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"programa no actualizado"+e.getMessage());
         }
         return false;
     }
 
     @Override
-    public boolean eliminarpro(int id) {
-     String sql="delete from programa where codprograma="+id;
+    public boolean eliminarpro(int codprograma) {
+     String sql="delete from programa where codprograma="+codprograma;
         try {
             con = cn.getConnection();
             ps=con.prepareStatement(sql);

@@ -34,22 +34,22 @@
                   ProgramaDao pdao = new ProgramaDao();
                   List<Programa>listar=pdao.listadopro();
                   Iterator<Programa>it=listar.iterator();
-                  Programa pro = null;
+                  Programa p = null;
                   while(it.hasNext()){
-                    pro = it.next();
+                    p = it.next();
                   
                   
                 %>
                 <tbody>
                     <tr>
-                        <td class="text-center"><%=pro.getCodprograma()%></td>
-                        <td class="text-center"><%=pro.getNomprograma()%></td>
+                        <td class="text-center"><%=p.getCodprograma()%></td>
+                        <td class="text-center"><%=p.getNomprograma()%></td>
                         <td class="text-center">
                         <div class="acciones">
-                            <a class="btn btn-warning" href="ControladorPrograma?accion=editar&id=<%=pro.getCodprograma()%>">
+                            <a class="btn btn-warning" href="ControladorPrograma?accion=editarpro&codprograma=<%=p.getCodprograma()%>">
                                 EDITAR
                             </a>
-                            <a class="btn btn-danger" href="ControladorPrograma?accion=eliminar&id=<%=pro.getCodprograma()%>">
+                            <a class="btn btn-danger" href="ControladorPrograma?accion=eliminarpro&codprograma=<%=p.getCodprograma()%>">
                                 ELIMINAR
                             </a>
                         </div>
@@ -59,7 +59,7 @@
                 </tbody>
                 
             </table>
+                <button onclick="location.href='index.jsp'">Volver al inicio</button>
         </div>
-        
     </body>
 </html>

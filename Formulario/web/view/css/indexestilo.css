@@ -2,14 +2,25 @@
 header {
   background-color: #4CAF50;
   padding: 20px;
-  text-align: center;
   color: white;
+  position: relative;
+}
+
+header .senalogo {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  margin-right: auto;
+}
+header h1 {
+  text-align: center;
 }
 
 
 h1 {
   font-family: "Arial", sans-serif;
   font-size: 32px;
+  
 }
 
 #botones {

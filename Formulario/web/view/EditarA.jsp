@@ -11,10 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link href="view/css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="view/css/estilo.css" rel="stylesheet" type="text/css"/>
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
-        <link href="css/AprendizEstilo.css" rel="stylesheet" type="text/css"/>
+        <link href="view/css/AprendizEstilo.css" rel="stylesheet" type="text/css"/>
         <title>Editar aprendiz</title>
     </head>
     <body>

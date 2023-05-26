@@ -83,7 +83,16 @@ public class FichaDao implements MeFicha{
 
     @Override
     public boolean actualizarFicha(Ficha fi) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+String sql = "UPDATE ficha SET cantapre='" + fi.getCantAprendiz() + "', codprod='" + fi.getCodPrograma() + "', codaprendiz='" + fi.getCodAprendiz() + "' WHERE codficha='" + fi.getCodFicha() + "'";
+        try {
+            con=cn.getConnection();
+            ps=con.prepareStatement(sql);
+            ps.executeUpdate();
+            JOptionPane.showMessageDialog(null,"ficha actualizada");
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null,"ficha no actualizada"+e.getMessage());
+        }
+        return false;    
     }
     
     @Override
