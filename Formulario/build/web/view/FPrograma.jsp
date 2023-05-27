@@ -13,13 +13,14 @@
             <form action="../ControladorPrograma">
                 <div class="form-group">
                     <label for="codigo">Codigo de Programa:</label>
-                    <input class="form-control" type="number" name="txtcodpro" id="codigo"required>
+                    <input class="form-control" type="number" name="txtcodpro" id="codigo">
                 </div>
                 <div class="form-group">
                     <label for="nombre">Nombre del Programa:</label>
-                    <input class="form-control" type="text" name="txtnombrepro" id="nombre"required>
+                    <input class="form-control" type="text" name="txtnombrepro" id="nombre">
                 </div>
                 <input class="btn btn-danger" type="submit" name="accion" value="AgregarPro">
+                <input class="btn btn-danger" type="submit" name="accion" value="ListarPro">
             </form>
         </div>
     </div>
