@@ -35,7 +35,7 @@
         <input id="codigopro" type="number" name="txtcodpro" value="<%=p.getCodprograma()%>"readonly>
 
         <label for="nombrepro">Nombre del programa</label>
-        <input id="nombrepro" type="text" name="txtnombrepro" value="<%=p.getNomprograma()%>">
+        <input id="nombrepro" type="text" name="txtnombrepro" value="<%=p.getNomprograma()%>"required>
 
 
         <input class="btn btn-primary" type="submit" name="accion" value="Editar">

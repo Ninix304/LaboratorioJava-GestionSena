@@ -19,19 +19,19 @@
       <form action="../ControladorAprendiz">
           
         <label for="documento">Documento</label>
-        <input id="documento" type="number" name="txtDoc">
+        <input id="documento" type="number" name="txtDoc"required>
 
         <label for="apellidos">Apellido</label>
-        <input id="apellidos" type="text" name="txtApe">
+        <input id="apellidos" type="text" name="txtApe"required>
 
         <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="txtNom">
+        <input id="nombre" type="text" name="txtNom"required>
 
         <label for="correo">Correo electrónico</label>
-        <input id="correo"  type="email" name="txtEmail">
+        <input id="correo"  type="email" name="txtEmail"required>
 
         <label for="nContact">Número de contacto</label>
-        <input id="nContact" type="number" name="txtTel">
+        <input id="nContact" type="number" name="txtTel"required>
 
         <input class="btn btn-primary" type="submit" name="accion" value="Agregar">
       </form>

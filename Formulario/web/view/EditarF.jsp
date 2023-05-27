@@ -36,11 +36,11 @@
       
       <form action="ControladorFicha">
           
-        <label for="id">Codigo de ficha</label>
-        <input id="id" type="number" name="txtCodFicha" value="<%=fi.getCodFicha()%>">
+        <label for="codficha">Codigo de ficha</label>
+        <input id="codficha" type="number" name="txtCodFicha" value="<%=fi.getCodFicha()%>"readonly>
 
-        <label for="apellidos">Cantidad de aprendices</label>
-        <input id="apellidos" type="text" name="txtCantAp" value="<%=fi.getCantAprendiz()%>">
+        <label for="cantapre">Cantidad de aprendices</label>
+        <input id="cantapre" type="text" name="txtCantAp" value="<%=fi.getCantAprendiz()%>"required>
         
         <div class="form-control">
                 <label>Nombre Programa:</label>

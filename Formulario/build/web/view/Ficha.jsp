@@ -20,14 +20,14 @@
             <form action="../ControladorFicha">
             
                 <label for="codficha">Código de Ficha</label><br>
-                <input type="number" id="codficha" name="txtCodFicha"><br>
+                <input type="number" id="codficha" name="txtCodFicha"required><br>
                 
                 <label for="cantap">Cantidad Aprendices</label><br>
-                <input type="number" id="cantap" name="txtCantAp">
+                <input type="number" id="cantap" name="txtCantAp"required>
                 
                 <div>
                     <label>Nombre Programa:</label>
-                    <select name="txtCodPro" id="codpro">
+                    <select name="txtCodPro" id="codpro"required>
                     <option value="">Seleccione un programa</option><br>
                     <%ProgramaDao pro = new ProgramaDao();
                     List<Programa>lista = pro.listadopro();
@@ -44,7 +44,7 @@
                 
                 <div>
                     <label>Nombre aprendiz:</label>
-                    <select name="txtCodAp" id="codap">
+                    <select name="txtCodAp" id="codap"required>
                     <option value="">Seleccione un Aprendiz</option><br>
                     <%AprendizDao adao = new AprendizDao();
                     List<Aprendiz>list = adao.listadoA();

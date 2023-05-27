@@ -31,16 +31,16 @@
           
         <input type="hidden" name="txtId" value="<%= id%>">
         <label for="documento">Documento</label>
-        <input id="documento" type="number" name="txtDoc" value="<%=ap.getDocuApre()%>">
+        <input id="documento" type="number" name="txtDoc" value="<%=ap.getDocuApre()%>"required>
         <label for="nombre">Nombre</label>
-        <input id="nombre" type="text" name="txtNom" value="<%=ap.getNombre()%>">
+        <input id="nombre" type="text" name="txtNom" value="<%=ap.getNombre()%>"required>
         <label for="apellidos">Apellido</label>
-        <input id="apellidos" type="text" name="txtApe" value="<%=ap.getApellido()%>">
+        <input id="apellidos" type="text" name="txtApe" value="<%=ap.getApellido()%>"required>
         <label for="correo">Correo electrónico</label>
-        <input id="correo"  type="email" name="txtEmail" value="<%=ap.getCorreo()%>">
+        <input id="correo"  type="email" name="txtEmail" value="<%=ap.getCorreo()%>"required>
 
         <label for="nContact">Número de contacto</label>
-        <input id="nContact" type="number" name="txtTel" value="<%=ap.getTeleApre()%>">
+        <input id="nContact" type="number" name="txtTel" value="<%=ap.getTeleApre()%>"required>
 
         <input class="btn btn-primary" type="submit" name="accion" value="EditarA">
       </form>
